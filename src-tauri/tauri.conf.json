@@ -1,7 +1,7 @@
 {
   "build": {
-    "beforeDevCommand": "pnpm dev",
-    "beforeBuildCommand": "pnpm build",
+    "beforeDevCommand": "bun run dev",
+    "beforeBuildCommand": "bun run build",
     "frontendDist": "../dist",
     "devUrl": "http://localhost:1420"
   },
@@ -16,8 +16,8 @@
     ],
     "targets": "all"
   },
-  "productName": "Lofi Engine",
-  "mainBinaryName": "Lofi Engine",
+  "productName": "lofi-engine",
+  "mainBinaryName": "lofi-engine",
   "version": "1.0.1",
   "identifier": "com.lofi-engine.dev",
   "plugins": {},
@@ -27,10 +27,10 @@
       {
         "fullscreen": false,
         "title": "Lofi Engine",
-        "width": 980,
-        "height": 580,
-        "minWidth": 930,
-        "minHeight": 530,
+        "width": 530,
+        "height": 230,
+        "minWidth": 530,
+        "minHeight": 230,
         "decorations": false,
         "transparent": true,
         "useHttpsScheme": true
