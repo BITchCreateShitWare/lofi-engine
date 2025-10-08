@@ -46,7 +46,7 @@
   });
   const lpf = new Tone.Filter(2000, "lowpass");
   const vol = new Tone.Volume(linearToDb(volumes.main_track));
-  Tone.Master.chain(cmp, lpf, vol);
+  Tone.getDestination().chain(cmp, lpf, vol);
   Tone.Transport.bpm.value = 156;
   Tone.Transport.swing = 1;
 

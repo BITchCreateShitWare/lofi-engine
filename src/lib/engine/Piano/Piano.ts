@@ -8,7 +8,7 @@ class Piano {
 	constructor(cb) {
 		this.sampler = new Tone.Sampler(Samples, () => {
 			cb();
-		}).chain(lpf,sw,Tone.Master);
+		}).chain(lpf, sw, Tone.getDestination());
 	}
 
 	sampler() {
