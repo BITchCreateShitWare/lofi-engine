@@ -1,12 +1,12 @@
 <script lang="ts">
   import {
-      IconLoader,
-      IconPlayerPauseFilled,
-      IconPlayerPlayFilled,
-      IconRefresh,
+    IconLoader,
+    IconPlayerPauseFilled,
+    IconPlayerPlayFilled,
+    IconRefresh,
   } from "@tabler/icons-svelte";
   import { onDestroy, onMount } from "svelte";
-// @ts-ignore
+  // @ts-ignore
   import * as Tone from "tone";
   import Visualizer from "../lib/components/Visualizer/index.svelte";
   import ChordProgression from "../lib/engine/Chords/ChordProgression";
@@ -27,6 +27,9 @@
     jungle: 1,
     main_track: 1,
   };
+
+  const ISDEBUG = true;
+
   // Load previous vols or defualt
   let volumes =
     JSON.parse(localStorage.getItem(STORAGE_KEY)) || DEFFAULT_VOLUMES;
@@ -196,6 +199,9 @@
 
   function playChord() {
     const chord = progression[progress];
+    if (ISDEBUG) {
+      console.log("PlayButton chord:", chord);
+    }
     const root = Tone.Frequency(key + "3").transpose(chord.semitoneDist);
     const size = 4;
     const voicing = chord.generateVoicing(size);
@@ -211,7 +217,10 @@
     if (melodyOff || !(Math.random() < melodyDensity)) {
       return;
     }
-
+    if (ISDEBUG) {
+      // debug check this point: always false
+      // console.log("PlayButton melodyOff: ", melodyOff);
+    }
     const descendRange = Math.min(scalePos, 7) + 1;
     const ascendRange = Math.min(scale.length - scalePos, 7);
 
