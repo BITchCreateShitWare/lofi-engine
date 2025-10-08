@@ -74,10 +74,10 @@
   let isPlaying = false;
 
   // Initialize instruments
-  const pn = new Piano(() => (pianoLoaded = true)).sampler;
-  const kick = new Kick(() => (kickLoaded = true)).sampler;
-  const snare = new Snare(() => (snareLoaded = true)).sampler;
-  const hat = new Hat(() => (hatLoaded = true)).sampler;
+  const pn = new Piano(() => (pianoLoaded = true)).getSampler();
+  const kick = new Kick(() => (kickLoaded = true)).getSampler();
+  const snare = new Snare(() => (snareLoaded = true)).getSampler();
+  const hat = new Hat(() => (hatLoaded = true)).getSampler();
   const noise = Noise;
 
   // Sequences
