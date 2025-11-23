@@ -1,3 +1,11 @@
+# Todo
+- I should probe a cli version
+
+
+
+
+
+
 # LoFi Engine
 <p align="center">
     <img alt="Icon" align="center" width="100" height="100" src="app-icon.png" />
