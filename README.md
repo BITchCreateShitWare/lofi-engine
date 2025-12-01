@@ -1,9 +1,6 @@
 # Todo
 - I should probe a cli version
-
-
-
-
+- newly change, I can reuse the frontend build dist with my own `htmlbundlergen.cpp` project
 
 
 # LoFi Engine
